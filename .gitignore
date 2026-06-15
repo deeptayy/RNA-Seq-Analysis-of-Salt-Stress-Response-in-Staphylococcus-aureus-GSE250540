@@ -1,0 +1,30 @@
+# Raw and processed sequencing files
+raw/
+trimmed/
+alignment/
+counts/
+reference/
+fastqc_raw/
+fastqc_trimmed/
+logs/
+
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.sra
+*.sam
+*.bam
+*.bai
+*.ht2
+
+# R session and editor files
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+

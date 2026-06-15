@@ -1,0 +1,8 @@
+analysis_label,geo_accession,sra_run,experiment_accession,condition,treatment,biological_replicate,organism,strain,library_layout
+Salt_1,GSM7981333,SRR27291863,SRX22969564,Salt,1 M NaCl,3,Staphylococcus aureus,SG511,SINGLE
+Salt_2,GSM7981332,SRR27291864,SRX22969563,Salt,1 M NaCl,2,Staphylococcus aureus,SG511,SINGLE
+Salt_3,GSM7981331,SRR27291865,SRX22969562,Salt,1 M NaCl,1,Staphylococcus aureus,SG511,SINGLE
+Control_1,GSM7981330,SRR27291866,SRX22969561,Control,Untreated,3,Staphylococcus aureus,SG511,SINGLE
+Control_2,GSM7981329,SRR27291867,SRX22969560,Control,Untreated,2,Staphylococcus aureus,SG511,SINGLE
+Control_3,GSM7981328,SRR27291868,SRX22969559,Control,Untreated,1,Staphylococcus aureus,SG511,SINGLE
+
