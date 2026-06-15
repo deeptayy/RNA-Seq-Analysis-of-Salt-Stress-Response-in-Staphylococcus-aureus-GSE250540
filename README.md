@@ -80,12 +80,6 @@ Additional metadata are available in
 |-- README.md
 |-- environment.yml
 |-- .gitignore
-|-- data/
-|   |-- README.md
-|   `-- metadata/
-|       `-- sample_metadata.csv
-|-- docs/
-|   `-- output_reference.md
 |-- figures/
 |   |-- heatmap.png
 |   |-- ma_plot.png
@@ -96,9 +90,11 @@ Additional metadata are available in
 |       |-- README.md
 |       |-- DESeq2_results.csv
 |       `-- SaltStress_Annotated_DEGs.csv
+|    `-- output_reference.md
 `-- scripts/
     |-- DEG.R
     `-- GSE250540_RNAseq_pipeline.sh
+    `-- sample_metadata.csv
 ```
 
 Large raw FASTQ, reference, and BAM files are not tracked. They can be
