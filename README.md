@@ -1,4 +1,4 @@
-# Staphylococcus aureus Salt-Stress RNA-seq
+# RNA-Seq Analysis of Salt Stress Response in Staphylococcus aureus (GSE250540)
 
 [![RNA-seq](https://img.shields.io/badge/analysis-RNA--seq-2ea44f)](https://en.wikipedia.org/wiki/RNA-Seq)
 [![GEO](https://img.shields.io/badge/GEO-GSE250540-336699)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE250540)
