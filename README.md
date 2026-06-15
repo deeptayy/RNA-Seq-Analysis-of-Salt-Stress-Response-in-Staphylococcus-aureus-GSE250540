@@ -1,10 +1,11 @@
 # RNA-Seq Analysis of Salt Stress Response in Staphylococcus aureus (GSE250540)
 
-[![RNA-seq](https://img.shields.io/badge/analysis-RNA--seq-2ea44f)](https://en.wikipedia.org/wiki/RNA-Seq)
-[![GEO](https://img.shields.io/badge/GEO-GSE250540-336699)](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE250540)
-[![Organism](https://img.shields.io/badge/organism-Staphylococcus_aureus-b31b1b)](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=1280)
-[![DESeq2](https://img.shields.io/badge/differential_expression-DESeq2-5b4b8a)](https://bioconductor.org/packages/DESeq2/)
-[![Languages](https://img.shields.io/badge/languages-Bash_%7C_R-276DC3)](#software-and-dependencies)
+![RNA-seq](https://img.shields.io/badge/RNA--seq-Analysis-green)
+![GEO](https://img.shields.io/badge/GEO-GSE250540-blue)
+![Organism](https://img.shields.io/badge/Organism-Staphylococcus_aureus-red)
+![DESeq2](https://img.shields.io/badge/DESeq2-Differential_Expression-purple)
+![Bash](https://img.shields.io/badge/Bash-Pipeline-brightgreen)
+![R](https://img.shields.io/badge/R-Analysis-blue)
 
 ## Overview
 
