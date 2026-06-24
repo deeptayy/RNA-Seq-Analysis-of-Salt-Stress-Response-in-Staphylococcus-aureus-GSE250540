@@ -11,46 +11,18 @@ count_matrix <- counts[,7:ncol(counts)]
 rownames(count_matrix) <- counts$Geneid
 head(count_matrix)
 
-metadata<-data.frame(
-  row.names = colnames(count_matrix) <- c(
-    "Salt_1",
-    "Salt_2",
-    "Salt_3",
-    "Control_1",
-    "Control_2",
-    "Control_3"
-  ),
-  
-  condition = c(
-    "Salt",
-    "Salt",
-    "Salt",
-    "Control",
-    "Control",
-    "Control"
-  )
-)
+metadata<-data.frame(row.names = colnames(count_matrix) <- c("Salt_1","Salt_2","Salt_3","Control_1","Control_2","Control_3"),
+                     condition = c("Salt","Salt","Salt","Control","Control","Control"))
 
-dds <-DESeqDataSetFromMatrix(
-  countData = count_matrix,
-  colData = metadata,
-  design = ~condition
-)
-
+dds <-DESeqDataSetFromMatrix(countData = count_matrix, colData = metadata,design = ~condition)
 dds <- dds[rowSums(counts(dds)) > 10,]
-
 dds <- DESeq(dds)
 
 res <- results(dds)
 
-sig <- subset(
-  res,
-  padj <0.05 &
-  abs(log2FoldChange) > 1
-)
+sig <- subset(res,padj <0.05 &abs(log2FoldChange) > 1)
 
 write.csv(as.data.frame(res),'DESeq2_results.csv')
-
 write.csv(as.data.frame(sig),'Significant_DEGs.csv')
 
 vsd <- vst(dds)
@@ -61,15 +33,10 @@ topgenes <-head (rownames(sig[order(sig$padj),]),15)
 
 library(EnhancedVolcano)
 
-EnhancedVolcano(
-  res,
-  lab = ifelse(rownames(res) %in% topgenes, rownames(res),''),
-  x='log2FoldChange',
-  y='padj'
-)
+EnhancedVolcano(res,lab = ifelse(rownames(res) %in% topgenes, rownames(res),''),
+                x='log2FoldChange',y='padj')
 
 library(pheatmap)
-
 pheatmap(assay(vsd)[topgenes,], fontsize_row =8 ,fontsize_col = 10)
 
 up<- subset(res,padj<0.05 & log2FoldChange>1)
@@ -138,15 +105,12 @@ sig <- sig[order(sig$padj),]
 write.csv(sig, 'SaltStress_Annotated_DEGs.csv', row.names =FALSE)
 
 up_annotated <- subset(annotated_res,padj<0.05 & log2FoldChange >1)
-
 down_annotated <- subset(annotated_res, padj <0.05 & log2FoldChange < -1)
 
 write.csv(up_annotated,'upregulated_annotated.csv', row.names = FALSE)
-
 write.csv(down_annotated,'downregulated_annotated.csv', row.names = FALSE)
 
 head(up_annotated[order(-up_annotated$log2FoldChange),],20)
-
 head(down_annotated[order(down_annotated$log2FoldChange),],20)
 
 clusterProfiler
